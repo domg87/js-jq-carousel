@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+
     
     $(".next").click(
         function(){
@@ -29,7 +30,33 @@ $(document).ready(function(){
         }
     );   
 
+    // circle
 
+    function nextCircle(){
+
+        var circleActive = $(".nav i.fa-circle.active");
+        circleActive.removeClass("active");
+
+        if(circleActive.hasClass("first") == true){
+            var nextCircle = $(".nav i.fa-circle.first");
+        } else {
+            var nextCircle = circleActive.next();
+        }
+    }
+
+
+    // funzione keydown per far girare le img con le frecce tastiera
+
+    
+    //  $(document).keydown(function(e){
+    //     if(e.keyCode == 39)
+    //     var nextImg = $("img.first");
+    //  });   
+
+    //  $(document).keydown(function(e){
+    //     if(e.keyCode == 37)
+    //     prev();
+    //  });  
 
 
 });
